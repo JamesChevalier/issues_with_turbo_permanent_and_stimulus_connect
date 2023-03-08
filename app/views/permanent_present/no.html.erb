@@ -1,2 +1,12 @@
 <h1>PermanentPresent#no</h1>
 <p>Find me in app/views/permanent_present/no.html.erb</p>
+<p>This page should never display the internal "item" div. It is hidden, and the hide_controller.js should ensure it's hidden if navigating from the "yes" page.</p>
+
+<div id="container" data-turbo-permanent data-controller="permanent">
+  <div id="item" class="hidden">originated on "no" page</div>
+</div>
+
+<div data-controller="hide"></div>
+<div data-controller="delayed"></div>
+
+<%= link_to "go to 'yes' page", yes_path, class: "underline underline-offset-1" %>

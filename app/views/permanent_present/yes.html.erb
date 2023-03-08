@@ -1,2 +1,12 @@
 <h1>PermanentPresent#yes</h1>
 <p>Find me in app/views/permanent_present/yes.html.erb</p>
+<p>This page should always display the internal "item" div. Its contents may be different, depending on which page FIRST drew it.</p>
+
+<div id="container" data-turbo-permanent data-controller="permanent">
+  <div id="item">originated on "yes" page</div>
+</div>
+
+<div data-controller="show"></div>
+<div data-controller="delayed"></div>
+
+<%= link_to "go to 'no' page", no_path, class: "underline underline-offset-1" %>

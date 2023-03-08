@@ -4,5 +4,11 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import Delayed from "./delayed_controller"
+import HideController from "./hide_controller"
+import PermanentController from "./permanent_controller"
+import ShowController from "./show_controller"
+application.register("delayed", Delayed)
+application.register("hide", HideController)
+application.register("permanent", PermanentController)
+application.register("show", ShowController)
